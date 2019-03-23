@@ -13,6 +13,7 @@ const config = {
   parent: "phaser-example",
   width: 800,
   height: 600,
+  parent: 'phaser-game',
   physics: {
     default: 'arcade',
     arcade: {
@@ -60,7 +61,7 @@ function create() {
   this.tweens.add({
     targets: logo,
     y: 450,
-    duration: 2000,
+    duration: 10000,
     ease: "Power2",
     yoyo: true,
     loop: -1
