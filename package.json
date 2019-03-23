@@ -8,10 +8,6 @@
     "start": "webpack-dev-server --config webpack/base.js --open",
     "deploy": "aws s3 sync dist/ s3://lab-1-phaser"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/photonstorm/phaser3-project-template.git"
-  },
   "author": "Richard Davey <rdavey@gmail.com> (http://www.photonstorm.com)",
   "license": "MIT",
   "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
