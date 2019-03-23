@@ -1,5 +1,5 @@
 {
-  "name": "phaser3-project-template",
+  "name": "phaser3",
   "version": "1.1.0",
   "description": "A Phaser 3 Project Template",
   "main": "src/index.js",
@@ -8,13 +8,7 @@
     "start": "webpack-dev-server --config webpack/base.js --open",
     "deploy": "aws s3 sync dist/ s3://lab-1-phaser"
   },
-  "author": "Richard Davey <rdavey@gmail.com> (http://www.photonstorm.com)",
-  "license": "MIT",
-  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
-  "bugs": {
-    "url": "https://github.com/photonstorm/phaser3-project-template/issues"
-  },
-  "homepage": "https://github.com/photonstorm/phaser3-project-template#readme",
+  "homepage": "http://lab-1-phaser.s3-website.eu-west-3.amazonaws.com/",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
