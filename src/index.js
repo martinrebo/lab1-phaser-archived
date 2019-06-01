@@ -37,6 +37,9 @@ var cursors;
 var score = 0;
 var gameOver = false;
 var scoreText;
+var discountText;
+var userText;
+
 
 const game = new Phaser.Game(config);
 
@@ -131,7 +134,13 @@ this.physics.add.overlap(player, stars, collectStar, null, this);
 
 
 // Score
-scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+scoreText = this.add.text(16, 25, 'score: 0', { fontSize: '20px', fill: '#000' });
+
+// discount
+discountText = this.add.text(650, 25, 'Code: *****', { fontSize: '20px', fill: '#000' });
+
+// user
+userText = this.add.text(300, 10, 'Collect the Stars!', { fontSize: '20px', fill: '#000' });
 
 // bombs 
 bombs = this.physics.add.group();
@@ -182,6 +191,8 @@ function collectStar (player, star)
 
         });
 
+        userText.setText("Wach out for crazy crabs")
+
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
         var bomb = bombs.create(x, 16, 'bomb');
@@ -190,6 +201,16 @@ function collectStar (player, star)
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 
     }
+
+    if (score > 100) {
+      discountText.setText('Code: APP10')
+    }
+
+    if (score > 200) {
+      discountText.setText('Code: APP20')
+    }
+    
+
 }
 
 function hitBomb (player, bomb)
@@ -200,6 +221,7 @@ function hitBomb (player, bomb)
 
     player.anims.play('turn');
 
+    userText.setText("Game Over - Reload Page")
     gameOver = true;
 
 
