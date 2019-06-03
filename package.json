@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --config webpack/base.js --open",
     "deploy": "aws s3 sync dist/ s3://lab-1-phaser"
   },
-  "homepage": "http://lab-1-phaser.s3-website.eu-west-3.amazonaws.com/",
+  "homepage": "http://localhost:8080/",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
@@ -18,6 +18,7 @@
     "html-webpack-plugin": "^3.2.0",
     "raw-loader": "^1.0.0",
     "terser-webpack-plugin": "^1.2.1",
+    "url-loader": "^1.1.2",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14",

@@ -1,11 +1,11 @@
 import Phaser from "phaser";
 
-import logoImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/world.png";
-import skyImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/sky.png";
-import starImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/star.png";
-import groundImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/platform.png";
-import dudeImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/dude.png";
-import bombImg  from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/bomb.png";
+import skyImg from "./assets/sky.png";
+import  starImg from "./assets/star.png";
+import  groundImg from "./assets/platform.png";
+import  dudeImg from "./assets/dude.png";
+import  bombImg  from "./assets/bomb.png";
+import  logo  from "./assets/world.png";
 
 
 const config = {
@@ -13,6 +13,7 @@ const config = {
   parent: "phaser-example",
   width: 800,
   height: 600,
+  crossOrigin: "anonymous",
   parent: 'phaser-game',
   physics: {
     default: 'arcade',
@@ -45,12 +46,15 @@ const game = new Phaser.Game(config);
 
 
 function preload() {
-  this.load.image("logo", logoImg);
-  this.load.image("sky", skyImg);
-  this.load.image("star", starImg);
-  this.load.image("ground", groundImg);
-  this.load.image("bomb", bombImg);
-  this.load.spritesheet("dude", dudeImg, { frameWidth: 32, frameHeight: 48 });
+ 
+  this.load.crossOrigin = 'anonymous';
+
+  this.load.image("logo", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/world.png");
+  this.load.image("sky", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/sky.png");
+  this.load.image("star", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/star.png");
+  this.load.image("ground", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/platform.png");
+  this.load.image("bomb", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/bomb.png");
+  this.load.spritesheet("dude", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/dude.png", { frameWidth: 32, frameHeight: 48 });
 }
 
 
