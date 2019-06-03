@@ -5,7 +5,7 @@ import  starImg from "./assets/star.png";
 import  groundImg from "./assets/platform.png";
 import  dudeImg from "./assets/dude.png";
 import  bombImg  from "./assets/bomb.png";
-import  logo  from "./assets/world.png";
+import  logoImg  from "./assets/world.png";
 
 
 const config = {
@@ -49,12 +49,12 @@ function preload() {
  
   this.load.crossOrigin = 'anonymous';
 
-  this.load.image("logo", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/world.png");
-  this.load.image("sky", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/sky.png");
-  this.load.image("star", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/star.png");
-  this.load.image("ground", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/platform.png");
-  this.load.image("bomb", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/bomb.png");
-  this.load.spritesheet("dude", "https://www.edreams.es/content/img/OF/WebMasterPages/images/edreams/dude.png", { frameWidth: 32, frameHeight: 48 });
+  this.load.image("logo", logoImg);
+  this.load.image("sky", skyImg);
+  this.load.image("star", starImg);
+  this.load.image("ground", groundImg);
+  this.load.image("bomb", bombImg);
+  this.load.spritesheet("dude", dudeImg, { frameWidth: 32, frameHeight: 48 });
 }
 
 
