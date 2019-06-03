@@ -1,11 +1,11 @@
 import Phaser from "phaser";
 
-import logoImg from "./assets/logo.png";
-import skyImg from "./assets/sky.png";
-import starImg from "./assets/star.png";
-import groundImg from "./assets/platform.png";
-import dudeImg from "./assets/dude.png";
-import bombImg  from "./assets/bomb.png";
+import logoImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/world.png";
+import skyImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/sky.png";
+import starImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/star.png";
+import groundImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/platform.png";
+import dudeImg from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/dude.png";
+import bombImg  from "https://a1.odistatic.net/content/img/OF/WebMasterPages/images/edreams/bomb.png";
 
 
 const config = {
@@ -191,7 +191,7 @@ function collectStar (player, star)
 
         });
 
-        userText.setText("Wach out for crazy crabs")
+        userText.setText("Wach out for crazy crabs!! ")
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
@@ -203,11 +203,14 @@ function collectStar (player, star)
     }
 
     if (score > 100) {
-      discountText.setText('Code: APP10')
+      discountText.setText('Code: A***0')
     }
 
     if (score > 200) {
-      discountText.setText('Code: APP20')
+      discountText.setText('Code: AP**0')
+    }
+    if (score > 300) {
+      discountText.setText('Code: APP10')
     }
     
 
