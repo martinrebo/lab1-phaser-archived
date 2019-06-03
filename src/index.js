@@ -49,20 +49,37 @@ function preload() {
  
   this.load.crossOrigin = 'anonymous';
 
-  this.load.image("logo", logoImg);
-  this.load.image("sky", skyImg);
-  this.load.image("star", starImg);
-  this.load.image("ground", groundImg);
-  this.load.image("bomb", bombImg);
-  this.load.spritesheet("dude", dudeImg, { frameWidth: 32, frameHeight: 48 });
+  // this.load.image("logo", logoImg);
+  // this.load.image("sky", skyImg);
+  // this.load.image("star", starImg);
+  // this.load.image("ground", groundImg);
+  // this.load.image("bomb", bombImg);
+  // this.load.spritesheet("dude", dudeImg, { frameWidth: 32, frameHeight: 48 });
 }
 
 
 
 function create() {
-  const sky = this.add.image(400, 300, "sky");
-  const star = this.add.image(100, 300, "star");
-  const logo = this.add.image(400, 150, "logo");
+  // const sky = this.add.image(400, 300, "sky");
+  // const star = this.add.image(100, 300, "star");
+  // const logo = this.add.image(400, 150, "logo");
+
+  // https://supernapie.com/blog/loading-assets-as-data-uri-in-phaser-3/
+
+  const sky = this.textures.addBase64('sky', skyImg);
+  const star = this.textures.addBase64('star', starImg);
+ const logo=  this.textures.addBase64('logo', logoImg);
+ 
+ const ground  = this.textures.addBase64('ground', groundImg);
+ const bomb  = this.textures.addBase64('bomb', bombImg);
+ 
+
+ var dudeImg = new Image();
+ dudeImg.onload = () => {
+     this.textures.addSpriteSheet('dude', dudeImg, { frameWidth: 16, frameHeight: 16 });
+ };
+ dudeImg.src = dude;
+
 
   // Logo Tweens 
   this.tweens.add({
@@ -76,14 +93,14 @@ function create() {
 
   // Platforms
   platforms = this.physics.add.staticGroup();
-  platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-  platforms.create(600, 400, 'ground');
-  platforms.create(50, 250, 'ground');
-  platforms.create(750, 220, 'ground');
+  platforms.create(400, 568, ground ).setScale(2).refreshBody();
+  platforms.create(600, 400, ground );
+  platforms.create(50, 250, ground );
+  platforms.create(750, 220, ground );
 
 
   // Player 
-  player = this.physics.add.sprite(100, 450, 'dude');
+  player = this.physics.add.sprite(100, 450, dude );
  
 
   player.setBounce(0.2);
