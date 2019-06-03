@@ -1,11 +1,20 @@
 import Phaser from "phaser";
 
+<<<<<<< HEAD
 import skyImg from "./assets/sky.png";
 import  starImg from "./assets/star.png";
 import  groundImg from "./assets/platform.png";
 import  dudeImg from "./assets/dude.png";
 import  bombImg  from "./assets/bomb.png";
 import  logoImg  from "./assets/world.png";
+=======
+import logoImg from "./assets/logo.png";
+import skyImg from "./assets/sky.png";
+import starImg from "./assets/star.png";
+import groundImg from "./assets/platform.png";
+import dudeImg from "./assets/dude.png";
+import bombImg  from "./assets/bomb.png";
+>>>>>>> parent of bcd3e34... Modificate paths for eDreams Server - Error on imports
 
 
 const config = {
@@ -212,7 +221,7 @@ function collectStar (player, star)
 
         });
 
-        userText.setText("Wach out for crazy crabs!! ")
+        userText.setText("Wach out for crazy crabs")
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
@@ -224,14 +233,11 @@ function collectStar (player, star)
     }
 
     if (score > 100) {
-      discountText.setText('Code: A***0')
+      discountText.setText('Code: APP10')
     }
 
     if (score > 200) {
-      discountText.setText('Code: AP**0')
-    }
-    if (score > 300) {
-      discountText.setText('Code: APP10')
+      discountText.setText('Code: APP20')
     }
     
 
